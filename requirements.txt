@@ -7,5 +7,3 @@ tensorflow-cpu==2.9.2
 matplotlib==3.3.2
 opencv-python
 numpy
-os-win
-glob2
