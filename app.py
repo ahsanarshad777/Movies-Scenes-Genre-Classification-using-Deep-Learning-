@@ -22,7 +22,7 @@ app = Flask(__name__)
 model = load_model('trained_model/InceptionV3.h5')
 target_img = os.path.join(os.getcwd() , 'static/videos')
 
-@app.route('/')
+@app.route('/',methods=['GET','POST'])
 def index_view():
     return render_template('index.html')
 
