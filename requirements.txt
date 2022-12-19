@@ -1,5 +1,5 @@
 Flask==1.1.2
-Python==3.8.5
+Python
 numpy==1.23.2
 pandas==1.1.3
 sklearn==0.23.2
