@@ -5,7 +5,7 @@ sklearn
 seaborn==0.11.0
 tensorflow==2.9.2
 matplotlib==3.3.2
-cv2==4.6.0
+cv2
 numpy
 os
 glob
