@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <title>Ahsan Arshad - Recommendation System</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-lg-12">
+      <center>
+        <h1 style="padding:30px;font-weight: 600 !important;font-size: 3.2em">Movie Scenes Genre Recommendation System
+        </h1>
+      </center>
+    </div>
+    <div class="col-lg-12">
+      <center>
+        <video width="820" height="450" controls>
+          <source src="{{ user_video }}" type="video/mp4" , alt="User Video">
+          <source src="{{ user_video }}" type="video/avi" , alt="User Video">
+          Your browser does not support the video tag.
+        </video>
+        <form class="form-inline" action="/predict" method="post" enctype="multipart/form-data">
+          <input type="file" name="file" /><br>
+          <input type="submit" class="btn btn-success" value="Predict">
+        </form>
+      </center>
+    </div>
+    <div class="col-lg-5" style="padding-top:30px">
+      <span class="border border-primary">
+        <img src="static/videos/bar_plot.png" alt="Bar Chart" class="img-thumbnail"
+          style="width:400px;height:400px;float:left">
+      </span>
+    </div>
+    <div class="col-lg-4" style="padding-top:30px">
+      <h4>Movie Genre Category is <mark style="background-color:#04aa6d;color:white;border-radius:5px">{{genre}}</mark>
+      </h4>
+      <h4>Probabilities : </h4>
+      <h5>Action :{{action_per}}</h5>
+      <h5>Horror :{{horror_per}}</h5>
+      <h5>Romantic :{{romantic_per}}</h5>
+      <h5>Sci-Fi :{{sci_fi_per}}</h5>
+    </div>
+
+
+    <div class="col-lg-5" style="padding-top:30px;">
+      <span class="border border-primary">
+        <img src="static/videos/pie_plot.png" alt="Pie Chart" class="img-thumbnail"
+          style="width:400px;height:400px;float:right;top: -200px;left: 60%;position: relative;">
+      </span>
+    </div>
+
+    <div  style="padding-top:10px;position: relative;top: -150px;width: 600px;height: 600px;">
+      <span class="border border-primary">
+        <img src="static/videos/CM_plot.png" alt="Confusion Matrix Plot" 
+          style="width: 600px;height: 600px;float:right;object-fit: cover;">
+      </span>
+    </div>
+
+  </div>
+
+
+
+</body>
+
+</html>
