@@ -27,7 +27,7 @@ def index_view():
     return render_template('index.html')
 
 #Allow files with extension mp4, avi and 
-ALLOWED_EXT = set(['mp4' , 'avi' ])
+ALLOWED_EXT = set(['mp4' , 'avi' , 'mkv'])
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1] in ALLOWED_EXT
