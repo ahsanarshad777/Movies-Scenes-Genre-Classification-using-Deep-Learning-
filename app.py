@@ -83,7 +83,7 @@ def video_to_Frames(input_video):
     return test
 
 
-@app.route('/predict',methods=['GET','POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
     if request.method == 'POST':
         file = request.files['file']
