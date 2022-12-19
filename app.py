@@ -79,7 +79,16 @@ def video_to_Frames(input_video):
     # Release all space and windows once done
     cam.release()
     cv2.destroyAllWindows()
-
+    
+    test_folder_path = r"test/test/"
+    for test_file_name in os.listdir(test_folder_path):
+        # construct full file path
+        test_file = test_folder_path + test_file_name
+        if os.path.isfile(test_file):
+            print('Deleting file:', test_file)
+            os.remove(test_file)
+            
+            
     return test
 
 
@@ -139,7 +148,9 @@ def predict():
                 
         
             max_no_label([action_per, horror_per , romantic_per , sci_fi_per])
-    
+            
+            del predictions
+            del data
     
             
             return render_template('predict.html', action_per = action_per, horror_per = horror_per, romantic_per = romantic_per , sci_fi_per = sci_fi_per , user_video = file_path , genre = genre)
