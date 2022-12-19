@@ -22,7 +22,7 @@ app = Flask(__name__)
 model = load_model('trained_model/InceptionV3.h5')
 target_img = os.path.join(os.getcwd() , 'static/videos')
 
-@app.route('/',methods=['GET','POST'])
+@app.route('/')
 def index_view():
     return render_template('index.html')
 
@@ -147,4 +147,4 @@ def predict():
             return "Unable to read the file. Please check file extension"
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
